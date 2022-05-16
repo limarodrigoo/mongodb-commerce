@@ -17,8 +17,8 @@ db.produtos
         tags: {
           $each: ["contém sódio"],
         },
-      }
-    }
+      },
+    },
   );
 
 db.produtos.find({}, { nome: true, tags: true, _id: false });
