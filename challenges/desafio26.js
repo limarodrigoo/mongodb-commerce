@@ -5,11 +5,12 @@ db.produtos
       {
         $elemMatch:
         {
-          tipo: "sódio", percentual: {
-            $gt: 20, $lt: 40
-          }
-        }
-      }
+          tipo: "sódio",
+          percentual: {
+            $gt: 20, $lt: 40,
+          },
+        },
+      },
     },
     {
       $push: {
@@ -17,6 +18,7 @@ db.produtos
           $each: ["contém sódio"],
         },
       }
-    });
+    }
+  );
 
 db.produtos.find({}, { nome: true, tags: true, _id: false });
