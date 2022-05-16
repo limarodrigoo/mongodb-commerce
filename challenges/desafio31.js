@@ -3,5 +3,5 @@ db.produtos
     {
       $expr:
         { $gt: ["$curtidas", "$vendidos"] },
-    }, { nome: true, _id: false }
+    }, { nome: true, _id: false },
   );
