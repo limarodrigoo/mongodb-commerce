@@ -17,6 +17,6 @@ db.produtos
 db.produtos
   .updateMany(
     { tags: { $in: ["bovino"] } },
-    { $inc: { "vendasPorDia.6": 120 } }
+    { $inc: { "vendasPorDia.6": 120 } },
   );
 db.produtos.find({}, { nome: true, vendasPorDia: true, _id: false });
