@@ -1,6 +1,6 @@
-let todayDate = new Date();
+const todayDate = new Date();
 db.produtos
-  .updateOne({ nome: 'Big Mac' },
+  .updateOne({ nome: "Big Mac" },
     {
       $set: {
         ultimaModificacao: todayDate
