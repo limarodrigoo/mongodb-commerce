@@ -3,11 +3,11 @@ db.produtos
   .updateOne({ nome: "Big Mac" },
     {
       $set: {
-        ultimaModificacao: todayDate
-      }
+        ultimaModificacao: todayDate,
+      },
     });
 db.produtos.find({
   ultimaModificacao:
-    { $exists: true }
+    { $exists: true },
 },
   { nome: true, _id: false });
